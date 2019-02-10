@@ -20,14 +20,20 @@ program
 createComponent(componentName);
 
 function createComponent(name) {
-  const root = path.resolve(name);
+  const root = path.resolve(`./src/components`);
+
   if (!fs.existsSync(root)) {
     fs.mkdirSync(root);
   }
 
   //  component
+
   if (program.component) {
-    fs.writeFileSync(path.join(root, `${name}.js`), component(name));
+    fs.mkdirSync(`${root}/${name}`);
+    fs.writeFileSync(
+      path.join(`${root}/${name}`, `${name}.js`),
+      component(name)
+    );
   }
 
   console.log(`Component ${name} created`);

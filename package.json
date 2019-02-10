@@ -1,6 +1,6 @@
 {
   "name": "rsk-cli",
-  "version": "1.0.6",
+  "version": "1.0.20",
   "description": "",
   "main": "index.js",
   "preferGlobal": true,
@@ -10,7 +10,9 @@
   "bin": {
     "rsk": "./index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "rsk-cli"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
